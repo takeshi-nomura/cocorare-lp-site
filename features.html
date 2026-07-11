@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>当店のこだわり | CoCorare</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- カスタムCSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-[#faf9f7] text-[#2a2a2a]">
+    <!-- ヘッダー読み込み -->
+    <div id="header-placeholder"></div>
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+
+          // ハンバーグメニューの制御スクリプト
+          const btn = document.getElementById("menu-btn");
+          const menu = document.getElementById("mobile-menu");
+          const icon = document.getElementById("menu-icon");
+          const links = document.querySelectorAll(".mobile-link");
+
+          if (btn && menu) {
+            btn.addEventListener("click", () => {
+              const isHidden = menu.classList.contains("hidden");
+              if (isHidden) {
+                menu.classList.remove("hidden");
+                menu.classList.add("flex");
+                icon.setAttribute("d", "M6 18L18 6M6 6l12 12");
+              } else {
+                menu.classList.add("hidden");
+                menu.classList.remove("flex");
+                icon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+              }
+            });
+
+            links.forEach((link) => {
+              link.addEventListener("click", () => {
+                menu.classList.add("hidden");
+                menu.classList.remove("flex");
+                icon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+              });
+            });
+          }
+        });
+    </script>
+
+    <main class="pt-32 pb-20 px-6">
+      <div class="max-w-2xl mx-auto">
+        <!-- ページタイトル -->
+        <div class="text-center mb-16">
+          <p
+            class="text-xs tracking-[0.2em] uppercase mb-3 text-[#b8958a] font-medium"
+          >
+            Our Concept
+          </p>
+          <h1 class="text-3xl font-light tracking-wide">CoCorareのこだわり</h1>
+          <p class="text-xs text-[#8c8c8c] mt-4 leading-relaxed">
+            利益よりも、目の前のお客様の髪の健康を第一に。<br />
+            私たちが大切にしている、3つの約束です。
+          </p>
+        </div>
+
+        <!-- こだわりコンテンツ -->
+        <div class="space-y-20">
+          <!-- こだわり1 -->
+          <div class="border-t border-[#ebe8e4] pt-10">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="font-serif text-3xl text-[#b8958a]">01</span>
+              <h2 class="text-xl font-light tracking-wide">
+                通いやすい価格と、それ以上の価値を
+              </h2>
+            </div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mt-4"
+            >
+              <div>
+                <p class="text-sm text-[#8c8c8c] leading-loose">
+                  「いつも綺麗な髪でいていただきたい」という想いから、通い続けやすい価格設定にこだわっています。マンツーマンサロンだからこそ実現できる、無駄のないシンプルな運営により、お財布に優しく、技術には一切妥協しないサービスをお届けします。
+                </p>
+              </div>
+              <!-- PRICEの画像を表示する場所 -->
+              <div class="w-full">
+                <img
+                  src="price.png"
+                  alt="CoCorareの洗練された店内の様子"
+                  class="w-full h-auto object-cover rounded-lg shadow-sm border border-[#ebe8e4]"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- こだわり2 -->
+          <div class="border-t border-[#ebe8e4] pt-10">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="font-serif text-3xl text-[#b8958a]">02</span>
+              <h2 class="text-xl font-light tracking-wide">
+                利益よりも、髪の健康を最優先
+              </h2>
+            </div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mt-4"
+            >
+              <!-- スマホでは文章が先、PCでは画像が左になるよう配置順を調整 -->
+
+              <div class="w-full md:order-1">
+                <img
+                  src="chemicals.png"
+                  alt="髪の健康を最優先にした仕上がり"
+                  class="w-full aspect-[3/2] h-full object-cover rounded-lg shadow-sm border border-[#ebe8e4]"
+                />
+              </div>
+              <div class="md:order-2">
+                <p class="text-sm text-[#8c8c8c] leading-loose">
+                  当店の最優先事項は、お客様の髪が5年後、10年後も美しくあることです。利益のために安価な薬剤を選ぶことはいたしません。カラーやパーマの際、徹底的にダメージを抑える優しい染液や、髪の芯から補修する上質なトリートメントを厳選して使用しています。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- こだわり3 -->
+          <div class="border-t border-[#ebe8e4] pt-10">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="font-serif text-3xl text-[#b8958a]">03</span>
+              <h2 class="text-xl font-light tracking-wide">
+                最新の自動洗浄スパシャンを無料サービス
+              </h2>
+            </div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mt-4"
+            >
+              <div>
+                <p class="text-sm text-[#8c8c8c] leading-loose">
+                  サロンでの時間をより贅沢に過ごしていただくため、200万円クラスの最新水圧式自動洗髪機（アクアフォルテ）を導入しております。手洗いでは届かない頭皮の汚れまで心地よい水圧でスッキリと洗い流し、極上の頭皮マッサージ効果をすべてのお客様に無料でサービスいたします。
+                </p>
+              </div>
+              <div class="w-full">
+                <img
+                  src="aquaforte.jpg"
+                  alt="自動洗髪機アクアフォルテによる頭皮マッサージの様子"
+                  class="w-full h-auto object-cover rounded-lg shadow-sm border border-[#ebe8e4]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 予約・動線 -->
+        <div class="mt-20 text-center space-y-4">
+          <a
+            href="https://coco-3o5ks.stores.jp/reserve/honten-nkxlps"
+            class="inline-block w-full sm:w-auto px-10 py-3.5 bg-[#2a2a2a] text-white text-sm tracking-wider rounded-full hover:bg-[#b8958a] transition"
+          >
+            Web予約はこちら
+          </a>
+          <p>
+            <a
+              href="index.html"
+              class="text-xs text-[#8c8c8c] tracking-wider hover:text-[#b8958a] transition"
+            >
+              トップページへ戻る
+            </a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="py-10 text-center border-t border-[#ebe8e4]">
+      <p class="text-lg tracking-widest mb-2">CoCorare</p>
+      <p class="text-xs text-[#8c8c8c]">&copy; CoCorare All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

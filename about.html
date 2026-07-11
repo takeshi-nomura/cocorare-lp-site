@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Owner Profile | CoCorare</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- カスタムCSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-[#faf9f7] text-[#2a2a2a]">
+    <!-- ヘッダー読み込み -->
+    <div id="header-placeholder"></div>
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+
+          // ハンバーグメニューの制御スクリプト
+          const btn = document.getElementById("menu-btn");
+          const menu = document.getElementById("mobile-menu");
+          const icon = document.getElementById("menu-icon");
+          const links = document.querySelectorAll(".mobile-link");
+
+          if (btn && menu) {
+            btn.addEventListener("click", () => {
+              const isHidden = menu.classList.contains("hidden");
+              if (isHidden) {
+                menu.classList.remove("hidden");
+                menu.classList.add("flex");
+                icon.setAttribute("d", "M6 18L18 6M6 6l12 12");
+              } else {
+                menu.classList.add("hidden");
+                menu.classList.remove("flex");
+                icon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+              }
+            });
+
+            links.forEach((link) => {
+              link.addEventListener("click", () => {
+                menu.classList.add("hidden");
+                menu.classList.remove("flex");
+                icon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+              });
+            });
+          }
+        });
+    </script>
+    <main class="pt-32 pb-20 px-6">
+      <div class="max-w-lg mx-auto text-center">
+        <p class="text-xs tracking-[0.2em] uppercase mb-3 text-[#8c8c8c]">
+          Stylist
+        </p>
+        <h1 class="text-3xl font-light tracking-wide mb-12">Owner Profile</h1>
+
+        <img
+          src="nishida-portrait.png"
+          alt="オーナー 西田"
+          class="w-36 h-36 rounded-full mx-auto mb-8 object-cover border border-[#ebe8e4]"
+        />
+
+        <h2 class="text-2xl font-light mb-1">西田成臣</h2>
+
+        <div
+          class="text-sm text-[#8c8c8c] leading-loose text-left space-y-6 border-t border-[#ebe8e4] pt-10"
+        >
+          <p>
+            念願だった自身の美容室「CoCorare」をオープンすることができました。これもひとえに、これまで支えてくださった家族や、温かいお客様のおかげです。心より感謝申し上げます。
+          </p>
+          <p>
+            当店では、お客様一人ひとりの想いに寄り添い、理想のスタイルを叶えることを何よりも大切にしています。ぜひ、遠慮なく何でもお話しください。
+          </p>
+        </div>
+
+        <div class="mt-12 space-y-4">
+          <a
+            href="https://coco-3o5ks.stores.jp/reserve/honten-nkxlps"
+            class="inline-block w-full sm:w-auto px-10 py-3.5 bg-[#2a2a2a] text-white text-sm tracking-wider rounded-full hover:bg-[#b8958a] transition"
+          >
+            Web予約はこちら
+          </a>
+          <p>
+            <a
+              href="index.html"
+              class="text-xs text-[#8c8c8c] tracking-wider hover:text-[#b8958a] transition"
+            >
+              トップページへ戻る
+            </a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="py-10 text-center border-t border-[#ebe8e4]">
+      <p class="text-lg tracking-widest mb-2">CoCorare</p>
+      <p class="text-xs text-[#8c8c8c]">&copy; CoCorare All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

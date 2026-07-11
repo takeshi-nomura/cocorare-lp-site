@@ -1,0 +1,92 @@
+<header
+  class="fixed top-0 left-0 right-0 z-50 bg-[#faf9f7]/90 backdrop-blur-md border-b border-[#ebe8e4]"
+>
+  <div
+    class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between relative z-50"
+  >
+    <!-- ロゴとアイコン -->
+    <a href="index.html" class="flex items-center gap-2">
+      <img
+        src="CoCorare.icon.png"
+        alt="CoCorare"
+        class="w-8 h-8 rounded-full object-cover"
+      />
+      <span class="font-serif text-xl tracking-widest text-[#2a2a2a]"
+        >CoCorare</span
+      >
+    </a>
+
+    <!-- パソコン用ナビゲーション -->
+    <nav class="hidden md:flex items-center gap-6 text-sm text-[#8c8c8c]">
+      <a href="index.html" class="nav-link hover:text-[#2a2a2a] transition"
+        >Home</a
+      >
+      <a href="features.html" class="nav-link hover:text-[#2a2a2a] transition"
+        >Concept</a
+      >
+      <a href="about.html" class="nav-link hover:text-[#2a2a2a] transition"
+        >About</a
+      >
+      <a href="index.html#menu" class="nav-link hover:text-[#2a2a2a] transition"
+        >Menu</a
+      >
+      <a
+        href="index.html#stylist"
+        class="nav-link hover:text-[#2a2a2a] transition"
+        >Stylist</a
+      >
+      <a
+        href="index.html#access"
+        class="nav-link hover:text-[#2a2a2a] transition"
+        >Access</a
+      >
+      <a
+        href="https://coco-3o5ks.stores.jp/reserve/honten-nkxlps/2886074#pageContent"
+        class="ml-2 px-5 py-2 bg-[#2a2a2a] text-white text-xs tracking-wider hover:bg-[#b8958a] transition rounded-full"
+      >
+        RESERVE
+      </a>
+    </nav>
+
+    <!-- スマホ用ハンバーグボタン -->
+    <button
+      id="menu-btn"
+      class="block md:hidden focus:outline-none"
+      aria-label="メニューを開く"
+    >
+      <svg
+        class="w-6 h-6 text-[#2a2a2a]"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          id="menu-icon"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <!-- スマホ用全画面メニュー（fixedの位置とz-indexを強化） -->
+  <div
+    id="mobile-menu"
+    class="fixed inset-0 w-screen h-screen bg-[#faf9f7] z-40 hidden flex-col justify-center items-center space-y-8 text-lg tracking-widest top-0 left-0"
+  >
+    <a href="index.html" class="mobile-link text-[#2a2a2a]">Home</a>
+    <a href="features.html" class="mobile-link text-[#2a2a2a]">Concept</a>
+    <a href="about.html" class="mobile-link text-[#2a2a2a]">About</a>
+    <a href="index.html#menu" class="mobile-link text-[#2a2a2a]">Menu</a>
+    <a href="index.html#stylist" class="mobile-link text-[#2a2a2a]">Stylist</a>
+    <a href="index.html#access" class="mobile-link text-[#2a2a2a]">Access</a>
+    <a
+      href="https://coco-3o5ks.stores.jp/reserve/honten-nkxlps/2886074#pageContent"
+      class="px-8 py-3 bg-[#2a2a2a] text-white text-sm tracking-wider rounded-full mt-4"
+    >
+      RESERVE
+    </a>
+  </div>
+</header>
