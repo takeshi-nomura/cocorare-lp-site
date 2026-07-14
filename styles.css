@@ -214,3 +214,12 @@ body {
     height: 13rem;
   }
 }
+/* PC表示（画面幅1024px以上）のときの設定 */
+@media (min-width: 1024px) {
+  .phone-link {
+    pointer-events: none; /* クリックやタップを無効化 */
+    cursor: default; /* カーソルを指マークから通常の矢印に戻す */
+    text-decoration: none; /* リンクの下線を消す（任意） */
+    color: inherit; /* 周りの文字と同じ色にする（任意） */
+  }
+}
