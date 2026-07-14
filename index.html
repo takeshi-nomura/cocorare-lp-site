@@ -3,49 +3,220 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="福井県坂井市春江駅近くの美容室CoCorare（ココラーレ）。完全マンツーマンの落ち着いた空間で、最新の水圧式自動洗髪機（アクアフォルテ）や厳選薬剤を使用した髪質改善メニューをご提供。お得なOPEN記念クーポンや学割U24もご用意しています。"
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="author" content="CoCorare（ココラーレ）" />
+    <link rel="canonical" href="https://cocorare-fukui.com/" />
     <link rel="icon" href="CoCorare.icon.png" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="CoCorare.icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:site_name" content="CoCorare（ココラーレ）" />
+    <meta
+      property="og:title"
+      content="CoCorare ココラーレ - 福井県坂井市春江駅の美容室"
+    />
+    <meta
+      property="og:description"
+      content="福井県坂井市春江駅近くの美容室CoCorare（ココラーレ）。完全マンツーマンの落ち着いた空間で、最新の水圧式自動洗髪機（アクアフォルテ）や厳選薬剤を使用した髪質改善メニューをご提供。"
+    />
+    <meta property="og:url" content="https://cocorare-fukui.com/" />
+    <meta
+      property="og:image"
+      content="https://cocorare-fukui.com/top-image.png"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="CoCorare ココラーレ - 福井県坂井市春江駅の美容室"
+    />
+    <meta
+      name="twitter:description"
+      content="完全マンツーマンで丁寧に。髪質改善・カラーで、毎日が少し楽しくなるスタイルを。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://cocorare-fukui.com/top-image.png"
+    />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css" />
-    <title>CoCorare ココラーレ - 福井県坂井市の美容室</title>
+    <title>
+      CoCorare
+      ココラーレ｜福井県坂井市春江駅の美容室・髪質改善専門マンツーマンサロン
+    </title>
+
+    <!-- 構造化データ（LocalBusiness / HairSalon） -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "CoCorare（ココラーレ）",
+        "image": "https://cocorare-fukui.com/top-image.png",
+        "url": "https://cocorare-fukui.com/",
+        "telephone": "0776-XX-XXXX",
+        "priceRange": "¥550〜¥7,700",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "春江町為国西の宮19",
+          "addressLocality": "坂井市",
+          "addressRegion": "福井県",
+          "postalCode": "919-0437",
+          "addressCountry": "JP"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 36.12916,
+          "longitude": 136.223256
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "10:00",
+          "closes": "19:00"
+        },
+        "sameAs": ["https://beauty.hotpepper.jp/slnH000725660/"]
+      }
+    </script>
   </head>
   <body class="pb-20 md:pb-0 bg-[#faf9f7] text-[#2a2a2a]">
-    <!-- ヘッダー読み込み -->
-    <div id="header-placeholder"></div>
+    <!-- ヘッダー（検索エンジンが即座に読み取れるよう直接埋め込み） -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-[#faf9f7]/90 backdrop-blur-md border-b border-[#ebe8e4]"
+    >
+      <div
+        class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between relative z-50"
+      >
+        <a href="index.html" class="flex items-center gap-2">
+          <img
+            src="CoCorare.icon.png"
+            alt="CoCorare（ココラーレ）福井県坂井市春江駅の美容室"
+            width="32"
+            height="32"
+            class="w-8 h-8 rounded-full object-cover"
+          />
+          <span class="font-serif text-xl tracking-widest text-[#2a2a2a]"
+            >CoCorare</span
+          >
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm text-[#8c8c8c]">
+          <a href="index.html" class="nav-link hover:text-[#2a2a2a] transition"
+            >Home</a
+          >
+          <a
+            href="features.html"
+            class="nav-link hover:text-[#2a2a2a] transition"
+            >Concept</a
+          >
+          <a href="about.html" class="nav-link hover:text-[#2a2a2a] transition"
+            >About</a
+          >
+          <a
+            href="index.html#menu"
+            class="nav-link hover:text-[#2a2a2a] transition"
+            >Menu</a
+          >
+          <a
+            href="index.html#access"
+            class="nav-link hover:text-[#2a2a2a] transition"
+            >Access</a
+          >
+          <a
+            href="https://beauty.hotpepper.jp/slnH000725660/"
+            class="ml-2 px-5 py-2 bg-[#2a2a2a] text-white text-xs tracking-wider hover:bg-[#b8958a] transition rounded-full"
+          >
+            RESERVE
+          </a>
+        </nav>
+
+        <button
+          id="menu-btn"
+          class="block md:hidden focus:outline-none"
+          aria-label="メニューを開く"
+        >
+          <svg
+            class="w-6 h-6 text-[#2a2a2a]"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              id="menu-icon"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 w-screen h-screen bg-[#faf9f7] z-40 hidden flex-col justify-center items-center space-y-8 text-lg tracking-widest top-0 left-0"
+      >
+        <a href="index.html" class="mobile-link text-[#2a2a2a]">Home</a>
+        <a href="features.html" class="mobile-link text-[#2a2a2a]">Concept</a>
+        <a href="about.html" class="mobile-link text-[#2a2a2a]">About</a>
+        <a href="index.html#menu" class="mobile-link text-[#2a2a2a]">Menu</a>
+        <a href="index.html#access" class="mobile-link text-[#2a2a2a]"
+          >Access</a
+        >
+        <a
+          href="https://beauty.hotpepper.jp/slnH000725660/"
+          class="px-8 py-3 bg-[#2a2a2a] text-white text-sm tracking-wider rounded-full mt-4"
+        >
+          RESERVE
+        </a>
+      </div>
+    </header>
     <script>
-      fetch("header.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("header-placeholder").innerHTML = data;
+      // ハンバーガーメニューの制御（fetch不要・即時実行でCLS/表示遅延を回避）
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      const icon = document.getElementById("menu-icon");
+      const links = document.querySelectorAll(".mobile-link");
 
-          // ハンバーグメニューの制御スクリプト
-          const btn = document.getElementById("menu-btn");
-          const menu = document.getElementById("mobile-menu");
-          const icon = document.getElementById("menu-icon");
-          const links = document.querySelectorAll(".mobile-link");
-
-          if (btn && menu) {
-            btn.addEventListener("click", () => {
-              const isHidden = menu.classList.contains("hidden");
-              if (isHidden) {
-                menu.classList.remove("hidden");
-                menu.classList.add("flex");
-                icon.setAttribute("d", "M6 18L18 6M6 6l12 12");
-              } else {
-                menu.classList.add("hidden");
-                menu.classList.remove("flex");
-                icon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
-              }
-            });
-
-            links.forEach((link) => {
-              link.addEventListener("click", () => {
-                menu.classList.add("hidden");
-                menu.classList.remove("flex");
-                icon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
-              });
-            });
+      if (btn && menu) {
+        btn.addEventListener("click", () => {
+          const isHidden = menu.classList.contains("hidden");
+          if (isHidden) {
+            menu.classList.remove("hidden");
+            menu.classList.add("flex");
+            icon.setAttribute("d", "M6 18L18 6M6 6l12 12");
+          } else {
+            menu.classList.add("hidden");
+            menu.classList.remove("flex");
+            icon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
           }
         });
+
+        links.forEach((link) => {
+          link.addEventListener("click", () => {
+            menu.classList.add("hidden");
+            menu.classList.remove("flex");
+            icon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+          });
+        });
+      }
     </script>
 
     <!-- ヒーロー -->
