@@ -116,74 +116,325 @@
     <!-- メニュー -->
     <section id="menu" class="py-20 px-6 bg-white">
       <div class="max-w-xl mx-auto">
-        <div class="text-center mb-12">
+        <div class="text-center mb-16">
           <p class="section-label mb-3">Price Menu</p>
-          <h2 class="font-serif text-3xl font-light tracking-wide">Menu</h2>
-          <p class="text-xs text-[#8c8c8c] mt-3">表示価格は税込です</p>
+          <h2 class="font-serif text-3xl font-light tracking-wide">
+            Menu & Coupon
+          </h2>
+          <p class="text-xs text-[#8c8c8c] mt-3">
+            表示価格は税込です。詳細な条件はホットペッパービューティーをご確認ください。
+          </p>
         </div>
 
-        <div class="flex flex-wrap justify-center gap-2 mb-10" role="tablist">
-          <button
-            onclick="openMenu(event, 'cut')"
-            role="tab"
-            aria-selected="true"
-            class="menu-tab active tab-link px-5 py-2 text-xs tracking-wider rounded-full"
+        <!-- ── カテゴリ1: お得なクーポン（全員対象・学割など） ── -->
+        <div class="mb-16">
+          <h3
+            class="text-xs tracking-[0.2em] text-[#b8958a] font-medium border-b border-[#ebe8e4] pb-2 mb-6 uppercase"
           >
-            カット
-          </button>
-          <button
-            onclick="openMenu(event, 'color')"
-            role="tab"
-            aria-selected="false"
-            class="menu-tab tab-link px-5 py-2 text-xs tracking-wider rounded-full text-[#8c8c8c]"
-          >
-            カラー
-          </button>
-          <button
-            onclick="openMenu(event, 'treatment')"
-            role="tab"
-            aria-selected="false"
-            class="menu-tab tab-link px-5 py-2 text-xs tracking-wider rounded-full text-[#8c8c8c]"
-          >
-            トリートメント
-          </button>
-        </div>
+            Recommended Coupons
+          </h3>
 
-        <div id="cut" class="menu-content" role="tabpanel">
-          <div class="menu-item py-5 flex justify-between items-start gap-4">
-            <div>
-              <p class="text-sm font-medium">メンズカット</p>
-              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
-                骨格・髪質に合わせた、日常に馴染むスタイルをご提案
-              </p>
-            </div>
-            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥3520</p>
-          </div>
-        </div>
-
-        <div id="color" class="menu-content hidden" role="tabpanel">
           <div class="menu-item py-5 flex justify-between items-start gap-4">
             <div>
               <p class="text-sm font-medium">
-                【メンズ限定】カラー+カット+スパシャン（アクアフォルテ）
+                【OPEN記念！】カット ＋ カラー ＋ トリートメント
               </p>
               <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
-                ブリーチ別途料金かかりますスパ用シャンプー機器でさっぱり洗い上げます
+                シャンプー・ブロー込み。色味が出やすい高級なイルミナカラーを使用しています。カラー直後の髪も3種類のステップトリートメントで傷みを緩和します。
               </p>
             </div>
             <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥7,700</p>
           </div>
-        </div>
 
-        <div id="treatment" class="menu-content hidden" role="tabpanel">
           <div class="menu-item py-5 flex justify-between items-start gap-4">
             <div>
-              <p class="text-sm font-medium">カット+トリートメント</p>
+              <p class="text-sm font-medium">
+                【学割U24】カット ＋ カラー ＋ トリートメント
+              </p>
               <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
-                内部から補修し、ツヤと手触りの良さを実感
+                シャンプー・ブロー込み。カラーは色味の出やすいイルミナカラーを使用し、トリートメントも3種類のステップトリートメントでカラー直後の髪を保護します。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥6,600</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">
+                【メンズ限定】カラー ＋ カット ＋ スパシャン（アクアフォルテ）
+              </p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                男性限定プラン。水圧式自動洗髪機（アクアフォルテ）のスパ用シャンプー機能で頭皮をさっぱり洗い上げます。（※ブリーチは別途料金がかかります）
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥7,700</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">【メンズ限定】メンズカット</p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                シャンプー・ブロー込み。男性の骨格や髪質に合わせた扱いやすいスタイルに仕上げます。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥3,520</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">【女性限定】レディースカット</p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                シャンプー・ブロー込み。丁寧なカウンセリングで、一人ひとりの魅力を引き出すスタイルをご提案します。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥3,520</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">カット ＋ トリートメント</p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                シャンプー・ブロー込み。カットと一緒に髪の内部へ栄養を届け、まとまりのある上品な質感へ導きます。
               </p>
             </div>
             <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥3,900</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">
+                カット ＋ トリートメント ＋ ヘッドスパ（アクアフォルテ）
+              </p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                シャンプー・ブロー込み。最新の水圧式自動洗髪機（アクアフォルテ）による極上の頭皮ケアと髪の保湿を同時に叶える贅沢プランです。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥3,900</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">
+                カット ＋ パーマ ＋ トリートメント
+              </p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                シャンプー・ブロー込み。デザイン性の高いパーマスタイルに、ダメージを抑えるトリートメントをセットにしました。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥7,700</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">
+                カラー（リタッチ） ＋ 髪質改善トリートメント
+              </p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                根元のリタッチカラーをしたあとに、酸性トリートメントをアイロンを使って施術し、髪の芯からツヤを引き出します。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥10,000</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">
+                カラー ＋ 髪質改善トリートメント
+              </p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                白髪染めやファッションカラーを繰り返して傷みなどが蓄積した髪を改善してきれいにします。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥11,000</p>
+          </div>
+        </div>
+
+        <!-- ── カテゴリ2: セットメニュー（通常） ── -->
+        <div class="mb-16">
+          <h3
+            class="text-xs tracking-[0.2em] text-[#b8958a] font-medium border-b border-[#ebe8e4] pb-2 mb-6 uppercase"
+          >
+            Set Menu
+          </h3>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">
+                カット ＋ ヘッドスパ（アクアフォルテ）
+              </p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                自動洗髪機（アクアフォルテ）での心地よい水圧スパにより、頭皮環境を健やかに整えます。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥4,950</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">カット ＋ カラー</p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                お客様のライフスタイルに合わせたデザインカットとカラーの基本的な組み合わせプランです。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥7,000〜</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">
+                カット ＋ カラー ＋ アクアフォルテスパ
+              </p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                カットとイルミナカラーをして、最新の水圧式自動洗髪機アクアフォルテで頭皮と髪を綺麗に保ちます。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥7,700</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">カラー ＋ アクアフォルテスパ</p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                カラーをした後に自動洗髪機（アクアフォルテ）で施術することで、手洗いよりも綺麗にカラー残留物を流します。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥6,600</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">
+                リタッチカラー ＋ 髪質改善トリートメント
+              </p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                リタッチカラーをしたあとに髪質改善ストレートをしてトリートメントをします。髪質改善はカラーした髪にしか効果がほぼないです。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥9,900〜</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">
+                リタッチカラー ＋ トリートメント
+              </p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                カラーした髪を極性トリートメントでしっかりと保護・保湿します。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥4,400〜</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">
+                全体フルカラー（イルミナ） ＋ トリートメント
+              </p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                イルミナカラーで透明感のある全体染めを行い、トリートメントで優しく髪を保護します。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥5,500〜</p>
+          </div>
+        </div>
+
+        <!-- ── カテゴリ3: カット（単品） ── -->
+        <div class="mb-16">
+          <h3
+            class="text-xs tracking-[0.2em] text-[#b8958a] font-medium border-b border-[#ebe8e4] pb-2 mb-6 uppercase"
+          >
+            Cut
+          </h3>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">メンズカット</p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                シャンプー・ブロー込み
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥4,400</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">レディースカット</p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                シャンプー・ブロー込み
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥4,400</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">前髪カット</p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                前髪のみのメンテナンスカットです。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥550</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">大学生さんカット</p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                大学生さん料金のカットメニューです。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥3,000</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">高校生さんカット</p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                高校生さんのためのカットメニューです。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥2,500</p>
+          </div>
+        </div>
+
+        <!-- ── カテゴリ4: カラー（単品） ── -->
+        <div class="mb-12">
+          <h3
+            class="text-xs tracking-[0.2em] text-[#b8958a] font-medium border-b border-[#ebe8e4] pb-2 mb-6 uppercase"
+          >
+            Color
+          </h3>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">リタッチカラー（5cm）</p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                グレイカラー（白髪染め）、ファッションカラー一律のお値段です。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥4,400〜</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">全体フルカラー</p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                イルミナカラーを使用し、全体を均一に美しく染め上げます。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥5,500〜</p>
+          </div>
+
+          <div class="menu-item py-5 flex justify-between items-start gap-4">
+            <div>
+              <p class="text-sm font-medium">
+                インナーカラー（ブリーチオンカラー）
+              </p>
+              <p class="text-xs text-[#8c8c8c] mt-1 leading-relaxed">
+                インナー部分をブリーチしてからオンカラーします。
+              </p>
+            </div>
+            <p class="text-sm font-medium whitespace-nowrap pt-0.5">¥6,600〜</p>
           </div>
         </div>
 
@@ -192,32 +443,9 @@
             href="https://beauty.hotpepper.jp/CSP/bt/reserve/?storeId=H000725660"
             class="text-xs text-[#b8958a] tracking-wider hover:text-[#9a7b72] transition underline underline-offset-4"
           >
-            その他のメニュー・ご予約はこちら
+            その他の詳細メニュー・空き状況の確認はこちら
           </a>
         </p>
-      </div>
-    </section>
-
-    <!-- スタイリスト -->
-    <section id="stylist" class="py-20 px-6">
-      <div class="max-w-md mx-auto text-center">
-        <p class="section-label mb-3">Stylist</p>
-        <div class="portrait-wrap">
-          <img src="nishida-portrait.png" alt="オーナー " />
-        </div>
-        <h2 class="font-serif text-2xl font-light mb-2">西田成臣</h2>
-        <p class="text-xs text-[#b8958a] tracking-wider mb-4">Owner Stylist</p>
-        <p class="text-xs text-[#b8958a] tracking-wider mb-4">美容師歴10年</p>
-        <p class="text-sm text-[#8c8c8c] mb-8 text-left">
-          オーナーの西田です。美容師歴10年、丁寧なカウンセリングを最も大切にしています。
-          「髪の悩みを相談したい」「自分に似合うスタイルを見つけたい」そんな想いにマンツーマンで寄り添います。髪質改善や白髪ぼかしなど、日々のケアからスタイルチェンジまでお任せください。あなたにとっての特別な時間を、春江駅近くの落ち着いた空間でお過ごしいただけるよう準備しております。
-        </p>
-        <a
-          href="about.html"
-          class="inline-block text-xs tracking-wider text-[#2a2a2a] border border-[#2a2a2a] px-8 py-3 rounded-full hover:bg-[#2a2a2a] hover:text-white transition"
-        >
-          プロフィールを見る
-        </a>
       </div>
     </section>
 
